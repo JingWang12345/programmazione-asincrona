@@ -79,9 +79,28 @@ function displayTodos() {
     }
 }
 
+
+// function createDeleteBtn(todo){
+//     const deleteBtn = document.createElement('button');
+//     const deleteNode = document.createTextNode('elimina');
+//     deleteBtn.appendChild(deleteNode);
+//     deleteBtn.addEventListener('click', (event)=> {
+//         superList.removeTodo(todo);
+//         displayTodos();
+//     });
+//     return deleteBtn;
+// }
+
+
+function displayTodos2(){
+   // template literal  
+}
+
+
 function displayTodos2(){
     
 }
+
 
 function orderByTitle() {
     superList.sortByTitle();
