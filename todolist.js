@@ -1,28 +1,28 @@
-class Todolist{
+class Todolist {
 
-    constructor(title, todoArray = []){
+    constructor(title, todoArray = []) {
         this.title = title;
         this.todoArray = todoArray;
     }
 
-    addTodo(todo){
+    addTodo(todo) {
         this.todoArray.push(todo);
     }
 
-    removeTodo(todo){
-
+    removeTodo(todo) {
+           this.todoArray = this.todoArray.filter((element) => element !== todo);
     }
 
-    sortByTitle(){
-
+    sortByTitle() {
+        return this.todoArray.sort((todo1, todo2) => todo1.compareByTitle(todo2));
     }
 
-    sortByCreationDate(){
-
+    sortByCreationDate() {
+        return this.todoArray.sort((todo1, todo2) => todo1.compareByCreationDate(todo2));
     }
 
-    completeTodo(todo){
-
+    completeTodo(todo) {
+       todo.isCompleted=true;
     }
 
     static fromObjectArray(title, objectArray) {

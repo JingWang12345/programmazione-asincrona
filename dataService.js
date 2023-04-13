@@ -7,7 +7,7 @@ class DataService {
     // }
 
     static getTodos() {
-        return fetch('https://6436ba0b3e4d2b4a12da1343.mockapi.io/todos')
+        return fetch('https://6436ba0b3e4d2b4a12da1343.mockapi.io/todo')
             .then(resp => resp.json())
     }
 
