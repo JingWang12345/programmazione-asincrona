@@ -36,8 +36,19 @@ class Todo {
     }
 
     static fromTodoObject(todoObject) {
-        return new Todo(todoObject.title, todoObject.creationDate, todoObject.isCompleted, todoObject.id);
+       const newTodo = new Todo(todoObject.title, todoObject.creationDate, todoObject.isCompleted, todoObject.id);
+        return newTodo;
     }
+
+toDbModel(){
+    const dbModel = {
+        title: this.title,
+        creationDate: this._creationDate,
+        isCompleted: this.isCompleted,
+        id: this.id
+    }
+    return dbModel;
+}
 
 
 }
